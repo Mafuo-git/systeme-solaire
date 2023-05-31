@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Système solaire</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="./init.js"></script>
+  <script src="./animate.js"></script>
+  <script src="./class.js"></script>
+  <script src="./main.js"></script>
+
+  <button id="toggleBtn" onclick="toggleMenu()">+</button>
+
+  <div id="encadre">
+    <h2>Saisir une date</h2>
+    <label for="annee">Année:</label>
+    <input type="number" id="annee">
+
+    <label for="jour">Jour:</label>
+    <input type="number" id="jour">
+
+    <label for="mois">Mois:</label>
+    <select id="mois">
+      <option value="January">January</option>
+      <option value="February">February</option>
+      <option value="March">March</option>
+      <option value="April">April</option>
+      <option value="May">May</option>
+      <option value="June">June</option>
+      <option value="Jully">Jully</option>
+      <option value="August">August</option>
+      <option value="September">September</option>
+      <option value="October">October</option>
+      <option value="November">November</option>
+      <option value="December">December</option>
+    </select>
+
+    <button id="Entrer" onclick="soumettreInformations()">Valider</button>
+    <br><br />
+
+    <button id="RealTime" onclick="RealTime()">Temps réel</button>
+  </div>
+
+  <div id="Time">
+    <h1><output type="number" id="runTime"></output></h1>
+    <h2><output type="text" id="runTimeSpeed"></output></h2>
+
+    <div class="button-row">
+      <button onclick="TimeSpeedDown()">
+        <img src="./images/down.svg" alt="down" class="st3"></img>
+      </button>
+
+      <button onclick="pauseAnimation()">
+        <img src="./images/pauses.svg" alt="pause" class="st0"></img>
+      </button>
+
+      <button onclick="startAnimation()">
+        <img src="./images/start.svg" alt="start" class="st1"></img>
+      </button>
+
+      <button onclick="resetAnimation()">
+        <img src="./images/reset.png" alt="reset" class="st2"></img>
+      </button>
+
+      <button onclick="TimeSpeedUp()">
+        <img src="./images/up.svg" alt="up" class="st4"></img>
+      </button>
+    </div>
+</body>
+
+</html>
